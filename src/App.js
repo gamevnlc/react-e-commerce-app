@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.scss';
-import { Container, Row, Col } from 'reactstrap'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faIgloo} from '@fortawesome/free-solid-svg-icons'
+import Navbar from './components/Navbar'
+import ProductList from './components/ProductList'
+import Details from './components/Details'
+import Cart from './components/Cart'
+import Default from './components/Default'
 
 library.add(faIgloo);
 
 class App extends Component {
-  render() {
-    return (
-        <React.Fragment>
-          <h3>Hello from App</h3>
-        </React.Fragment>
-    );
-  }
+    render() {
+        return (
+            <React.Fragment>
+                <Navbar />
+                <ProductList/>
+                <Details/>
+                <Cart/>
+                <Default/>
+            </React.Fragment>
+        );
+    }
 }
 
 export default App;
